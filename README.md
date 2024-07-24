@@ -35,9 +35,6 @@ Here's an overview of the project structure:
 
 ```
 banana-shop
-├── .netlify
-├── dist
-├── node_modules
 ├── public
 │   ├── img
 │   │   ├── favicon.ico
