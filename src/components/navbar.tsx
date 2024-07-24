@@ -1,7 +1,4 @@
-import { Button } from "@nextui-org/button";
-import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
-import { Input } from "@nextui-org/input";
 import {
   Navbar as NextUINavbar,
   NavbarBrand,
@@ -15,7 +12,6 @@ import { link as linkStyles } from "@nextui-org/theme";
 import clsx from "clsx";
 
 import { siteConfig } from "@/config/site";
-import { ThemeSwitch } from "@/components/theme-switch";
 
 export const Navbar = () => {
   return (
@@ -33,7 +29,7 @@ export const Navbar = () => {
               width={32}
               height={32}
             />
-            <p className="font-bold text-inherit">Banana</p>
+            <p className="font-bold text-inherit mr-5">Banana</p>
           </Link>
         </NavbarBrand>
         <div className="hidden lg:flex gap-4 justify-start ml-2">
@@ -60,7 +56,6 @@ export const Navbar = () => {
       ></NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <ThemeSwitch />
         <NavbarMenuToggle />
       </NavbarContent>
 
@@ -69,14 +64,8 @@ export const Navbar = () => {
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
               <Link
-                color={
-                  index === 2
-                    ? "primary"
-                    : index === siteConfig.navMenuItems.length - 1
-                      ? "foreground" // Logout button change it to danger color
-                      : "foreground"
-                }
-                href="#"
+                color="foreground"
+                href={siteConfig.navMenuItems[index].href}
                 size="lg"
               >
                 {item.label}

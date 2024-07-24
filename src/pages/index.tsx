@@ -1,11 +1,3 @@
-import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code";
-import { button as buttonStyles } from "@nextui-org/theme";
-
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
 import Hero from "@/components/section/Hero";
 import FadeInSection from "@/components/tools/FadeInSection";
@@ -18,23 +10,31 @@ import Contact from "@/components/section/Contact";
 export default function IndexPage() {
   return (
     <DefaultLayout>
-      <div className="container">
-        <FadeInSection>
-          {/* Hero Section */}
-          <Hero />
-          {/* Features Section */}
-          <Features />
-          {/* Product Section */}
-          <Product />
-          {/* Aplication Download Section */}
-          <AppDownload />
-          {/* AboutUs Section */}
-          <AboutUs />
+      {/* Hero Section */}
+      <FadeInSection delay={0}>
+        <Hero />
+      </FadeInSection>
+      {/* Features Section */}
+      <FadeInSection delay={0.2}>
+        <Features />
+      </FadeInSection>
+      {/* Product Section */}
+      <FadeInSection delay={0.3}>
+        <Product />
+      </FadeInSection>
+      {/* Aplication Download Section */}
+      <FadeInSection delay={0.4}>
+        <AppDownload />
+      </FadeInSection>
+      {/* AboutUs Section */}
+      <FadeInSection delay={0.5}>
+        <AboutUs />
+      </FadeInSection>
 
-          {/* Contact Section */}
-          <Contact />
-        </FadeInSection>
-      </div>
+      {/* Contact Section */}
+      <FadeInSection delay={0.6}>
+        <Contact />
+      </FadeInSection>
     </DefaultLayout>
   );
 }

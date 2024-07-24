@@ -1,6 +1,7 @@
 //components
 import { DeButton } from "@/components/ui/DeButton";
 import { DeTitle } from "../ui/DeTitle";
+import { siteConfig } from "@/config/site";
 
 const Hero = () => {
   return (
@@ -29,17 +30,22 @@ const Hero = () => {
             </DeTitle>
 
             <div className="mt-8 flex justify-center">
-              <DeButton
-                text="Shop Now"
-                onClick={() => {}}
-                className="bg-gradient-to-t from-primary to-secondary text-yellow-700 mr-3 font-extrabold"
-              />
+              <a href={siteConfig.links.ShopNowBtn}>
+                {" "}
+                <DeButton
+                  text="Shop Now"
+                  onClick={() => {}}
+                  className="bg-gradient-to-t from-primary to-secondary text-yellow-700 mr-3 font-extrabold"
+                />
+              </a>
 
-              <DeButton
-                text="Learn More"
-                onClick={() => {}}
-                className="bg-gray-100 text-black"
-              />
+              <a href={siteConfig.links.LearnMoreBtn}>
+                <DeButton
+                  text="Learn More"
+                  onClick={() => {}}
+                  className="bg-gray-100 text-black"
+                />
+              </a>
             </div>
           </div>
         </section>

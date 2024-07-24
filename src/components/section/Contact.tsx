@@ -1,17 +1,21 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { DeTitle } from "../ui/DeTitle";
+
+import { siteConfig } from "@/config/site";
 
 const Contact: React.FC = () => {
   return (
-    <section className="bg-gray-50 py-16">
+    <section className="py-16">
       <div className="container mx-auto px-4 text-center">
         <motion.h2
-          className="text-4xl font-extrabold text-gray-900 mb-8"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Contact Us
+          <DeTitle size="sm" className="mb-8">
+            Contact Us
+          </DeTitle>
         </motion.h2>
         <motion.p
           className="text-lg text-gray-700 mb-12"
@@ -25,12 +29,12 @@ const Contact: React.FC = () => {
         </motion.p>
         <div className="flex flex-wrap justify-center">
           <motion.div
-            className="w-full md:w-1/2 lg:w-1/3 p-4"
+            className="w-full md:w-1/2 lg:w-1/2 py-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <form className="bg-white p-6 rounded-lg shadow-lg">
+            <form className="bg-white p-6 rounded-lg shadow-lg text-left mr-5">
               <div className="mb-4">
                 <label
                   htmlFor="name"
@@ -75,14 +79,14 @@ const Contact: React.FC = () => {
               </div>
               <button
                 type="submit"
-                className="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition-colors"
+                className="w-full bg-primary text-orange-900 font-bold px-4 py-2 rounded-lg hover:bg-primary-dark transition-colors"
               >
                 Send Message
               </button>
             </form>
           </motion.div>
           <motion.div
-            className="w-full md:w-1/2 lg:w-1/3 p-4"
+            className="w-full md:w-1/2 lg:w-1/2 py-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
@@ -92,13 +96,13 @@ const Contact: React.FC = () => {
                 Contact Information
               </h3>
               <p className="text-gray-700 mb-2">
-                <strong>Email:</strong> support@bananawebsite.com
+                <strong>Email:</strong> {siteConfig.contact.email}
               </p>
               <p className="text-gray-700 mb-2">
-                <strong>Phone:</strong> +1 (234) 567-890
+                <strong>Phone:</strong> {siteConfig.contact.phone}
               </p>
               <p className="text-gray-700 mb-2">
-                <strong>Address:</strong> 123 Banana St, Fruit City, FL 12345
+                <strong>Address:</strong> {siteConfig.contact.address}
               </p>
               <p className="text-gray-700">
                 Follow us on social media for updates and promotions!

@@ -1,18 +1,21 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { DeTitle } from "../ui/DeTitle";
 
 const AboutUs: React.FC = () => {
   return (
-    <section className="bg-gray-50 py-16">
+    <section className="py-16">
       <div className="container mx-auto px-4 text-center">
-        <motion.h2
-          className="text-4xl font-extrabold text-gray-900 mb-8"
+        <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          About Us
-        </motion.h2>
+          <DeTitle size="sm" className="mb-8">
+            {" "}
+            About Us
+          </DeTitle>
+        </motion.div>
         <motion.p
           className="text-lg text-gray-700 mb-12"
           initial={{ opacity: 0, y: -20 }}
