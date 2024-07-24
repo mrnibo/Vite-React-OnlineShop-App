@@ -1,4 +1,3 @@
-
 # Banana Shop Project
 
 Welcome to the Banana Shop Project! This is a web application designed to help you buy the freshest bananas online. The project is built using modern web development tools and frameworks to ensure a fast, responsive, and user-friendly experience.
@@ -14,7 +13,7 @@ This project is built using the following technologies:
 
 ## Preview
 
-![Preview](./preview.webp)
+![Preview](public/preview.webp)
 
 ## Demo
 
@@ -22,13 +21,13 @@ Check out the live demo of the project [here](https://nibobanana.netlify.app).
 
 ## Features
 
-| Feature           | Status       |
-| ----------------- | ------------ |
-| Landing Page      | ✅ Done      |
-| Page Route        | ✅ Done      |
-| Dashboard         | ❌ Undone    |
-| Admin Dashboard   | 🚧 In Progress |
-| Cart Basket       | ❌ Undone    |
+| Feature         | Status         |
+| --------------- | -------------- |
+| Landing Page    | ✅ Done        |
+| Page Route      | ✅ Done        |
+| Dashboard       | ❌ Undone      |
+| Admin Dashboard | 🚧 In Progress |
+| Cart Basket     | ❌ Undone      |
 
 ## Cloning the Project
 
@@ -67,21 +66,21 @@ I welcome collaboration on this project! Here's how you can get involved:
 
 1. **Fork the repository**: Click the "Fork" button at the top right of the repository page on GitHub.
 2. **Clone your fork**: Use the cloning instructions above, but clone your forked repository.
-3. **Create a new branch**: 
+3. **Create a new branch**:
 
    ```bash
    git checkout -b feature/your-feature-name
    ```
 
 4. **Make your changes**: Work on your feature, fix bugs, or improve the documentation.
-5. **Commit your changes**: 
+5. **Commit your changes**:
 
    ```bash
    git add .
    git commit -m "Add a brief message about your changes"
    ```
 
-6. **Push to your fork**: 
+6. **Push to your fork**:
 
    ```bash
    git push origin feature/your-feature-name
